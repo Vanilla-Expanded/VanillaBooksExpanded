@@ -21,10 +21,18 @@ namespace VanillaBooksExpanded
 
         public QuestScriptDef questToUnlock;
 
-        private static HashSet<string> bannedQuestDefs = new HashSet<string>
+        private static HashSet<string> whitelistQuestDefs = new HashSet<string>
         {
-            "OpportunitySite_PeaceTalks",
-            "EndGame_ShipEscape",
+            "OpportunitySite_BanditCamp",
+            "OpportunitySite_ItemStash",
+            "LongRangeMineralScannerLump",
+            "Mission_BanditCamp",
+            "AncientComplex_Standard",
+            "Hack_Spacedrone",
+            "OpportunitySite_AncientComplex",
+            "AncientComplex_Mission",
+            "Hack_WorshippedTerminal",
+            "OpportunitySite_AncientComplex_Mechanitor",
         };
 
         public override void PostMake()
@@ -91,8 +99,7 @@ namespace VanillaBooksExpanded
         }
         private QuestScriptDef GetRandomQuestDef()
         {
-            return DefDatabase<QuestScriptDef>.AllDefs.Where(q => !bannedQuestDefs.Contains(q.defName) 
-            && q.IsRootAny && HasMapNode(q.root)).RandomElement();
+            return DefDatabase<QuestScriptDef>.AllDefs.Where(q => whitelistQuestDefs.Contains(q.defName)).RandomElement();
         }
         private bool TryGetRandomPlayerRelic(out Precept_Relic relic)
         {
