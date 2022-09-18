@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ARECSL3kouOfi6rU+BvySB2U39OvwuLRsok8woECNk4YVDlIRJqdBmVe/8nkIOFczUJtUTS/5P6e22muNt5N8g==",
+  "success": true,
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaBooksExpanded\\1.4\\Source\\VanillaBooksExpanded\\VanillaBooksExpanded.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Vova\\.nuget\\packages\\lib.harmony\\2.2.2\\lib.harmony.2.2.2.nupkg.sha512"
+  ],
+  "logs": []
+}
