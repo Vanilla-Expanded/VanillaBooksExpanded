@@ -58,7 +58,7 @@ namespace VanillaBooksExpanded
             }
             else if (!this.used && !this.researchProject.IsFinished && this.researchProject.PrerequisitesCompleted)
             {
-                string label = "VBE.ReadBlueprint".Translate();
+                string label = "VBE.ReadBlueprint".Translate(this.def.label + " (" + this.researchProject.LabelCap + ")");
                 Action action = delegate ()
                 {
                     Job job = JobMaker.MakeJob(VBE_DefOf.VBE_ReadBook, null, this);

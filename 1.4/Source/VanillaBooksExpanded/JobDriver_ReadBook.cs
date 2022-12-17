@@ -70,6 +70,10 @@ namespace VanillaBooksExpanded
                         if (compBook != null && compBook.Props.skillData.skillToTeach != null)
                         {
                             var learnValue = skillBook.GetLearnAmount();
+                            if (actor.needs.learning != null)
+                            {
+                                actor.needs.learning.Learn(1.2E-05f * LearningUtility.LearningRateFactor(pawn));
+                            }
                             actor.skills.Learn(compBook.Props.skillData.skillToTeach, learnValue);
                         }
                     }
@@ -82,7 +86,7 @@ namespace VanillaBooksExpanded
                         ReadyForNextToil();
                     }
                 }
-                if (book.Props.joyAmountPerTick > 0)
+                if (pawn.needs.joy != null && book.Props.joyAmountPerTick > 0)
                 {
                     pawn.needs.joy.GainJoy(book.Props.joyAmountPerTick, VBE_DefOf.VBE_Reading);
                 }
@@ -134,8 +138,6 @@ namespace VanillaBooksExpanded
 
                     }
 
-
-
                     if (book.Props.destroyAfterReading)
                     {
                         book.Destroy(DestroyMode.Vanish);
@@ -143,14 +145,17 @@ namespace VanillaBooksExpanded
                     else
                     {
                         Thing thing = book;
+                        if (book.ParentHolder is Pawn_CarryTracker carryTracker)
+                        {
+                            carryTracker.TryDropCarriedThing(pawn.Position, ThingPlaceMode.Near, out thing);
+                        };
                         StoragePriority storagePriority = StoreUtility.CurrentStoragePriorityOf(thing);
                         IntVec3 intVec;
-                        if (StoreUtility.TryFindBestBetterStoreCellFor(thing, this.pawn, base.Map, storagePriority, this.pawn.Faction, out intVec, true))
+                        if (StoreUtility.TryFindBestBetterStoreCellFor(thing, pawn, base.Map, storagePriority, this.pawn.Faction,
+                            out intVec))
                         {
-                            this.job.SetTarget(TargetIndex.C, intVec);
-                            this.job.SetTarget(TargetIndex.B, thing);
-                            this.job.count = thing.stackCount;
-                            return;
+                            var job = HaulAIUtility.HaulToCellStorageJob(pawn, thing, intVec, fitInStoreCell: false);
+                            pawn.jobs.jobQueue.EnqueueFirst(job);
                         }
                     }
                     base.EndJobWith(JobCondition.Succeeded);

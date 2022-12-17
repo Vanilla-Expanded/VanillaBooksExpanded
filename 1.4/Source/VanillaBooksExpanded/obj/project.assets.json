@@ -5,10 +5,14 @@
       "Lib.Harmony/2.2.2": {
         "type": "package",
         "compile": {
-          "lib/net472/0Harmony.dll": {}
+          "lib/net472/0Harmony.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net472/_._": {}
+          "lib/net472/_._": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -16,10 +20,14 @@
       "Lib.Harmony/2.2.2": {
         "type": "package",
         "compile": {
-          "lib/net472/0Harmony.dll": {}
+          "lib/net472/0Harmony.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net472/_._": {}
+          "lib/net472/_._": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -27,10 +35,14 @@
       "Lib.Harmony/2.2.2": {
         "type": "package",
         "compile": {
-          "lib/net472/0Harmony.dll": {}
+          "lib/net472/0Harmony.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net472/_._": {}
+          "lib/net472/_._": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -38,10 +50,14 @@
       "Lib.Harmony/2.2.2": {
         "type": "package",
         "compile": {
-          "lib/net472/0Harmony.dll": {}
+          "lib/net472/0Harmony.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net472/_._": {}
+          "lib/net472/_._": {
+            "related": ".xml"
+          }
         }
       }
     }
@@ -83,7 +99,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sarg\\.nuget\\packages\\": {}
+    "C:\\Users\\Vova\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -91,12 +107,12 @@
       "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaBooksExpanded\\1.4\\Source\\VanillaBooksExpanded\\VanillaBooksExpanded.csproj",
       "projectName": "VanillaBooksExpanded",
       "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaBooksExpanded\\1.4\\Source\\VanillaBooksExpanded\\VanillaBooksExpanded.csproj",
-      "packagesPath": "C:\\Users\\Sarg\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Vova\\.nuget\\packages\\",
       "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaBooksExpanded\\1.4\\Source\\VanillaBooksExpanded\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\Sarg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Vova\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

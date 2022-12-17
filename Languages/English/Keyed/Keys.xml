@@ -3,7 +3,7 @@
 <LanguageData>
 
 	<VBE.Book>Book</VBE.Book>
-	<VBE.ReadBook>Read book</VBE.ReadBook>
+	<VBE.ReadBook>Read {0}</VBE.ReadBook>
 	
 	<VBE.CantReadSkillBookTooSimple>Can't read: This skillbook is not sufficient.</VBE.CantReadSkillBookTooSimple>
 
@@ -11,7 +11,7 @@
 	<VBE.NewspaperRelevantUntil>Relevant until: </VBE.NewspaperRelevantUntil>
 	<VBE.CantReadNewsPaperExpired>Can't read: This newspaper is out of date.</VBE.CantReadNewsPaperExpired>
 
-	<VBE.ReadBlueprint>Read blueprint</VBE.ReadBlueprint>
+	<VBE.ReadBlueprint>Read {0}</VBE.ReadBlueprint>
 	<VBE.CantReadBlueprintAlreadyResearched>Can't read: This technology is already known.</VBE.CantReadBlueprintAlreadyResearched>
 	<VBE.CantReadBlueprintTooAdvanced>Can't read: This technology is too advanced.</VBE.CantReadBlueprintTooAdvanced>
 	<VBE.CantReadBlueprintUsed>Can't read: This blueprint is already used.</VBE.CantReadBlueprintUsed>

@@ -4,7 +4,7 @@
   <JobDef>
     <defName>VBE_ReadBook</defName>
     <driverClass>VanillaBooksExpanded.JobDriver_ReadBook</driverClass>
-    <reportString>reading.</reportString>
+    <reportString>reading TargetB.</reportString>
     <joyDuration>4000</joyDuration>
     <joyKind>VBE_Reading</joyKind>
   </JobDef>

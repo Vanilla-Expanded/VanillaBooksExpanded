@@ -37,7 +37,7 @@ namespace VanillaBooksExpanded
             }
             else if (this.CanLearnFromBook(myPawn))
             {
-                string label = "VBE.ReadBook".Translate();
+                string label = "VBE.ReadBook".Translate(this.def.label);
                 Action action = delegate ()
                 {
                     Job job = JobMaker.MakeJob(VBE_DefOf.VBE_ReadBook, null, this);
