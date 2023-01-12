@@ -38,7 +38,9 @@ namespace VanillaBooksExpanded
             yield return Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.Touch);
             pawn.CurJob.count = 1;
             yield return Toils_Haul.StartCarryThing(TargetIndex.B);
-            yield return FindSeatsForReading(pawn).FailOnForbidden(TargetIndex.C);
+            yield return FindSeatsForReading(pawn);
+            yield return Toils_Reserve.Reserve(TargetIndex.C);
+            yield return Toils_Goto.GotoThing(TargetIndex.C, PathEndMode.OnCell);
 
             var toil = new Toil();
             toil.AddPreInitAction(() =>
@@ -173,62 +175,60 @@ namespace VanillaBooksExpanded
         };
         private Toil FindSeatsForReading(Pawn p)
         {
-            try
+            return new Toil
             {
-                var chairCandidates = p.Map?.listerThings?.AllThings?.Where(x => x.def?.building?.isSittable ?? false);
-                var bestChairs = new Dictionary<float, List<Thing>>();
-                foreach (var chair in chairCandidates)
+                initAction = delegate
                 {
-                    var score = chair.def?.GetStatValueAbstract(StatDefOf.Comfort);
-                    if (score.HasValue && IntVec3Utility.DistanceTo(book.Position, chair.Position) < 60 && !chair.IsForbidden(p))
+                    var chairCandidates = p.Map.listerThings.AllThings.Where(x => x.def?.building?.isSittable ?? false);
+                    var bestChairs = new Dictionary<float, List<Thing>>();
+                    foreach (var chair in chairCandidates)
                     {
-                        var role = chair?.GetRoom()?.Role;
-                        if (role != null && allowedRooms.Contains(role) && !(chair is Building_Throne))
+                        var score = chair.def.GetStatValueAbstract(StatDefOf.Comfort);
+                        if (IntVec3Utility.DistanceTo(pawn.Position, chair.Position) < 60 && !chair.IsForbidden(p))
                         {
-                            var building = (chair.Position + chair.Rotation.FacingCell).GetFirstBuilding(p.Map);
-                            if (building != null && building.def.IsWorkTable) continue;
+                            var role = chair.GetRoom()?.Role;
+                            if (role != null && allowedRooms.Contains(role) && !(chair is Building_Throne))
+                            {
+                                var building = (chair.Position + chair.Rotation.FacingCell).GetFirstBuilding(p.Map);
+                                if (building != null && building.def.IsWorkTable) continue;
 
-                            if (bestChairs.ContainsKey(score.Value))
-                            {
-                                bestChairs[score.Value].Add(chair);
-                            }
-                            else
-                            {
-                                bestChairs[score.Value] = new List<Thing> { chair };
+                                if (bestChairs.ContainsKey(score))
+                                {
+                                    bestChairs[score].Add(chair);
+                                }
+                                else
+                                {
+                                    bestChairs[score] = new List<Thing> { chair };
+                                }
                             }
                         }
                     }
-                }
 
-                while (bestChairs.Count > 0)
-                {
-                    var key = bestChairs.MaxBy(x => x.Key).Key;
-                    foreach (var thing in bestChairs[key].OrderBy(y => IntVec3Utility.DistanceTo(book.Position, y.Position)))
+                    while (bestChairs.Count > 0)
+                    {
+                        var key = bestChairs.MaxBy(x => x.Key).Key;
+                        foreach (var thing in bestChairs[key].OrderBy(y => IntVec3Utility.DistanceTo(pawn.Position, y.Position)))
+                        {
+                            if (p.CanReserveAndReach(thing, PathEndMode.OnCell, Danger.Deadly) && !thing.IsForbidden(p))
+                            {
+                                p.CurJob.targetC = thing;
+                                return;
+                            }
+                        }
+                        bestChairs.Remove(key);
+                    }
+
+                    foreach (var thing in chairCandidates.OrderByDescending(y => y.def?.GetStatValueAbstract(StatDefOf.Comfort)))
                     {
                         if (p.CanReserveAndReach(thing, PathEndMode.OnCell, Danger.Deadly) && !thing.IsForbidden(p))
                         {
                             p.CurJob.targetC = thing;
-                            p.Reserve(thing, p.CurJob);
-                            var toil = Toils_Goto.GotoThing(TargetIndex.C, PathEndMode.OnCell);
-                            return toil;
+                            return;
                         }
                     }
-                    bestChairs.Remove(key);
+                    p.CurJob.targetC = pawn.Position;
                 }
-
-                foreach (var thing in chairCandidates.OrderByDescending(y => y.def?.GetStatValueAbstract(StatDefOf.Comfort)))
-                {
-                    if (p.CanReserveAndReach(thing, PathEndMode.OnCell, Danger.Deadly) && !thing.IsForbidden(p))
-                    {
-                        p.CurJob.targetC = thing;
-                        p.Reserve(thing, p.CurJob);
-                        var toil = Toils_Goto.GotoThing(TargetIndex.C, PathEndMode.OnCell);
-                        return toil;
-                    }
-                }
-            }
-            catch { };
-            return new Toil();
+            };
         }
     }
 }
