@@ -293,32 +293,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Books\BookData.cs" />
-    <Compile Include="Books\TechBlueprint.cs" />
-    <Compile Include="Books\MapItem.cs" />
-    <Compile Include="Books\Newspaper.cs" />
-    <Compile Include="Books\SkillBook.cs" />
+    <Compile Include="BookOutcomeDoerGainSkillExp_OnBookGenerated_Patch.cs" />
+    <Compile Include="BookOutcomeDoer_Newspaper.cs" />
+    <Compile Include="Book_GenerateBook_Patch.cs" />
+    <Compile Include="GenRecipe_PostProcessProduct_Patch.cs" />
+    <Compile Include="JobDriver_Reading_ReadBook_Patch.cs" />
+    <Compile Include="Newspaper.cs" />
+    <Compile Include="RecipeSkillBook.cs" />
+    <Compile Include="RecipeWorker_CreateSkillBook.cs" />
     <Compile Include="RoomRoleWorker_Library.cs" />
-    <Compile Include="JobDriver_ReadBook.cs" />
-    <Compile Include="JoyGiver_ReadBook.cs" />
-    <Compile Include="SubEffecter_ReadingBookSymbol.cs" />
-    <Compile Include="TaleBookReference.cs" />
-    <Compile Include="HarmonyPatches.cs" />
-    <Compile Include="TaleTextGenerator.cs" />
-    <Compile Include="ITab_Book.cs" />
-    <Compile Include="Books\CompProperties_Book.cs" />
-    <Compile Include="Books\CompBook.cs" />
-    <Compile Include="Books\Book.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MoteDualAttachedForBook.cs" />
+    <Compile Include="VanillaBooksExpandedMod.cs" />
     <Compile Include="VBE_DefOf.cs" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Krafs.Publicizer">
+      <Version>2.2.1</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="Lib.Harmony">
       <Version>2.2.2</Version>
       <ExcludeAssets>runtime</ExcludeAssets>
       <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <Publicize Include="Assembly-CSharp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

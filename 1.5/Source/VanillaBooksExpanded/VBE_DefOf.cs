@@ -11,10 +11,6 @@ namespace VanillaBooksExpanded
 	[DefOf]
 	public static class VBE_DefOf
 	{
-		public static JobDef VBE_ReadBook;
-
-		public static JoyKindDef VBE_Reading;
-
 		public static ThingDef VBE_Filth_Newspaper;
 
 		public static RoomRoleDef VBE_Library;

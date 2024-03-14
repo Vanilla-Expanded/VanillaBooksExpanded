@@ -4,7 +4,7 @@ using Verse;
 
 namespace VanillaBooksExpanded
 {
-	public class RoomRoleWorker_Library : RoomRoleWorker
+    public class RoomRoleWorker_Library : RoomRoleWorker
 	{
 		public override float GetScore(Room room)
 		{
@@ -15,8 +15,13 @@ namespace VanillaBooksExpanded
 				{
 					num++;
 				}
-			}
-			return 3f * (float)num;
+				else if (t is Building_Bookcase building_Bookcase)
+				{
+                    num++;
+                    num += building_Bookcase.HeldBooks.Count;
+                }
+            }
+			return 13.5f * (float)num;
 		}
 	}
 }
