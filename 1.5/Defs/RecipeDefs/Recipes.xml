@@ -33,9 +33,9 @@
 	
 	<RecipeDef ParentName="VBE_SkillBookRecipeBase">
 		<defName>VBE_RecipeShooting</defName>
-		<label>make shooting book</label>
-		<description>Make shooting book.</description>
-		<jobString>making shooting book.</jobString>
+		<label>write shooting book</label>
+		<description>Write shooting book.</description>
+		<jobString>writing shooting book.</jobString>
 		<modExtensions>
 			<li Class="VanillaBooksExpanded.RecipeSkillBook">
 				<skill>Shooting</skill>
@@ -45,9 +45,9 @@
 
 	<RecipeDef ParentName="VBE_SkillBookRecipeBase">
 		<defName>VBE_RecipeMelee</defName>
-		<label>make melee book</label>
-		<description>Make melee book.</description>
-		<jobString>making melee book.</jobString>
+		<label>write melee book</label>
+		<description>Write melee book.</description>
+		<jobString>writing melee book.</jobString>
 		<modExtensions>
 			<li Class="VanillaBooksExpanded.RecipeSkillBook">
 				<skill>Melee</skill>
@@ -57,9 +57,9 @@
 
 	<RecipeDef ParentName="VBE_SkillBookRecipeBase">
 		<defName>VBE_RecipeConstruction</defName>
-		<label>make construction book</label>
-		<description>Make construction book.</description>
-		<jobString>making construction book.</jobString>
+		<label>write construction book</label>
+		<description>Write construction book.</description>
+		<jobString>writing construction book.</jobString>
 		<modExtensions>
 			<li Class="VanillaBooksExpanded.RecipeSkillBook">
 				<skill>Construction</skill>
@@ -70,9 +70,9 @@
 
 	<RecipeDef ParentName="VBE_SkillBookRecipeBase">
 		<defName>VBE_RecipeMining</defName>
-		<label>make mining book</label>
-		<description>Make mining book.</description>
-		<jobString>making mining book.</jobString>
+		<label>write mining book</label>
+		<description>Write mining book.</description>
+		<jobString>writing mining book.</jobString>
 		<modExtensions>
 			<li Class="VanillaBooksExpanded.RecipeSkillBook">
 				<skill>Mining</skill>
@@ -82,9 +82,9 @@
 
 	<RecipeDef ParentName="VBE_SkillBookRecipeBase">
 		<defName>VBE_RecipeCooking</defName>
-		<label>make cooking book</label>
-		<description>Make cooking book.</description>
-		<jobString>making cooking book.</jobString>
+		<label>write cooking book</label>
+		<description>Write cooking book.</description>
+		<jobString>writing cooking book.</jobString>
 		<modExtensions>
 			<li Class="VanillaBooksExpanded.RecipeSkillBook">
 				<skill>Cooking</skill>
@@ -94,9 +94,9 @@
 
 	<RecipeDef ParentName="VBE_SkillBookRecipeBase">
 		<defName>VBE_RecipeGrowing</defName>
-		<label>make growing book</label>
-		<description>Make growing book.</description>
-		<jobString>making growing book.</jobString>
+		<label>write growing book</label>
+		<description>Write growing book.</description>
+		<jobString>writing growing book.</jobString>
 		<modExtensions>
 			<li Class="VanillaBooksExpanded.RecipeSkillBook">
 				<skill>Plants</skill>
@@ -106,9 +106,9 @@
 
 	<RecipeDef ParentName="VBE_SkillBookRecipeBase">
 		<defName>VBE_RecipeAnimals</defName>
-		<label>make animals book</label>
-		<description>Make animals book.</description>
-		<jobString>making animals book.</jobString>
+		<label>write animals book</label>
+		<description>Write animals book.</description>
+		<jobString>writing animals book.</jobString>
 		<modExtensions>
 			<li Class="VanillaBooksExpanded.RecipeSkillBook">
 				<skill>Animals</skill>
@@ -118,9 +118,9 @@
 
 	<RecipeDef ParentName="VBE_SkillBookRecipeBase">
 		<defName>VBE_RecipeCrafting</defName>
-		<label>make crafting book</label>
-		<description>Make crafting book.</description>
-		<jobString>making crafting book.</jobString>
+		<label>write crafting book</label>
+		<description>Write crafting book.</description>
+		<jobString>writing crafting book.</jobString>
 		<modExtensions>
 			<li Class="VanillaBooksExpanded.RecipeSkillBook">
 				<skill>Crafting</skill>
@@ -130,9 +130,9 @@
 	
 	<RecipeDef ParentName="VBE_SkillBookRecipeBase">
 		<defName>VBE_RecipeArt</defName>
-		<label>make art book</label>
-		<description>Make art book.</description>
-		<jobString>making art book.</jobString>
+		<label>write art book</label>
+		<description>Write art book.</description>
+		<jobString>writing art book.</jobString>
 		<modExtensions>
 			<li Class="VanillaBooksExpanded.RecipeSkillBook">
 				<skill>Artistic</skill>
@@ -142,9 +142,9 @@
 
 	<RecipeDef ParentName="VBE_SkillBookRecipeBase">
 		<defName>VBE_RecipeMedical</defName>
-		<label>make medical book</label>
-		<description>Make medical book.</description>
-		<jobString>making medical book.</jobString>
+		<label>write medical book</label>
+		<description>Write medical book.</description>
+		<jobString>writing medical book.</jobString>
 		<modExtensions>
 			<li Class="VanillaBooksExpanded.RecipeSkillBook">
 				<skill>Medicine</skill>
@@ -155,9 +155,9 @@
 
 	<RecipeDef ParentName="VBE_SkillBookRecipeBase">
 		<defName>VBE_RecipeSocial</defName>
-		<label>make social book</label>
-		<description>Make social book.</description>
-		<jobString>making social book.</jobString>
+		<label>write social book</label>
+		<description>Write social book.</description>
+		<jobString>writing social book.</jobString>
 		<modExtensions>
 			<li Class="VanillaBooksExpanded.RecipeSkillBook">
 				<skill>Social</skill>
@@ -167,9 +167,9 @@
 
 	<RecipeDef ParentName="VBE_SkillBookRecipeBase">
 		<defName>VBE_RecipeIntellectual</defName>
-		<label>make intellectual book</label>
-		<description>Make intellectual book.</description>
-		<jobString>making intellectual book.</jobString>
+		<label>write intellectual book</label>
+		<description>Write intellectual book.</description>
+		<jobString>writing intellectual book.</jobString>
 		<modExtensions>
 			<li Class="VanillaBooksExpanded.RecipeSkillBook">
 				<skill>Intellectual</skill>
