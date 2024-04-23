@@ -3,10 +3,10 @@
 
 	<RecipeDef Name="VBE_SkillBookRecipeBase" Abstract="True">
 		<workSpeedStat>ResearchSpeed</workSpeedStat>
-		<workSkill>Intellectual</workSkill>
 		<unfinishedThingDef>VBE_UnfinishedBook</unfinishedThingDef>
 		<effectWorking>Sculpt</effectWorking>
 		<soundWorking>Recipe_Write</soundWorking>
+		<workerCounterClass>VanillaBooksExpanded.RecipeWorker_CreateSkillBook</workerCounterClass>
 		<recipeUsers>
 			<li>VBE_WritersTable</li>
 			<li>VBE_TypewritersTable</li>
@@ -36,6 +36,7 @@
 		<label>write shooting book</label>
 		<description>Write shooting book.</description>
 		<jobString>writing shooting book.</jobString>
+		<workSkill>Shooting</workSkill>
 		<modExtensions>
 			<li Class="VanillaBooksExpanded.RecipeSkillBook">
 				<skill>Shooting</skill>
@@ -48,6 +49,7 @@
 		<label>write melee book</label>
 		<description>Write melee book.</description>
 		<jobString>writing melee book.</jobString>
+		<workSkill>Melee</workSkill>
 		<modExtensions>
 			<li Class="VanillaBooksExpanded.RecipeSkillBook">
 				<skill>Melee</skill>
@@ -60,6 +62,7 @@
 		<label>write construction book</label>
 		<description>Write construction book.</description>
 		<jobString>writing construction book.</jobString>
+		<workSkill>Construction</workSkill>
 		<modExtensions>
 			<li Class="VanillaBooksExpanded.RecipeSkillBook">
 				<skill>Construction</skill>
@@ -73,6 +76,7 @@
 		<label>write mining book</label>
 		<description>Write mining book.</description>
 		<jobString>writing mining book.</jobString>
+		<workSkill>Mining</workSkill>
 		<modExtensions>
 			<li Class="VanillaBooksExpanded.RecipeSkillBook">
 				<skill>Mining</skill>
@@ -85,6 +89,7 @@
 		<label>write cooking book</label>
 		<description>Write cooking book.</description>
 		<jobString>writing cooking book.</jobString>
+		<workSkill>Cooking</workSkill>
 		<modExtensions>
 			<li Class="VanillaBooksExpanded.RecipeSkillBook">
 				<skill>Cooking</skill>
@@ -97,6 +102,7 @@
 		<label>write growing book</label>
 		<description>Write growing book.</description>
 		<jobString>writing growing book.</jobString>
+		<workSkill>Plants</workSkill>
 		<modExtensions>
 			<li Class="VanillaBooksExpanded.RecipeSkillBook">
 				<skill>Plants</skill>
@@ -109,6 +115,7 @@
 		<label>write animals book</label>
 		<description>Write animals book.</description>
 		<jobString>writing animals book.</jobString>
+		<workSkill>Animals</workSkill>
 		<modExtensions>
 			<li Class="VanillaBooksExpanded.RecipeSkillBook">
 				<skill>Animals</skill>
@@ -121,6 +128,7 @@
 		<label>write crafting book</label>
 		<description>Write crafting book.</description>
 		<jobString>writing crafting book.</jobString>
+		<workSkill>Crafting</workSkill>
 		<modExtensions>
 			<li Class="VanillaBooksExpanded.RecipeSkillBook">
 				<skill>Crafting</skill>
@@ -133,6 +141,7 @@
 		<label>write art book</label>
 		<description>Write art book.</description>
 		<jobString>writing art book.</jobString>
+		<workSkill>Artistic</workSkill>
 		<modExtensions>
 			<li Class="VanillaBooksExpanded.RecipeSkillBook">
 				<skill>Artistic</skill>
@@ -145,6 +154,7 @@
 		<label>write medical book</label>
 		<description>Write medical book.</description>
 		<jobString>writing medical book.</jobString>
+		<workSkill>Medicine</workSkill>
 		<modExtensions>
 			<li Class="VanillaBooksExpanded.RecipeSkillBook">
 				<skill>Medicine</skill>
@@ -158,6 +168,7 @@
 		<label>write social book</label>
 		<description>Write social book.</description>
 		<jobString>writing social book.</jobString>
+		<workSkill>Social</workSkill>
 		<modExtensions>
 			<li Class="VanillaBooksExpanded.RecipeSkillBook">
 				<skill>Social</skill>
@@ -170,6 +181,7 @@
 		<label>write intellectual book</label>
 		<description>Write intellectual book.</description>
 		<jobString>writing intellectual book.</jobString>
+		<workSkill>Intellectual</workSkill>
 		<modExtensions>
 			<li Class="VanillaBooksExpanded.RecipeSkillBook">
 				<skill>Intellectual</skill>

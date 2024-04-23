@@ -9,9 +9,9 @@ namespace VanillaBooksExpanded
     {
         public static bool Prefix(BookOutcomeDoerGainSkillExp __instance)
         {
-            if (GenRecipe_PostProcessProduct_Patch.curWorker != null)
+            if (GenRecipe_MakeRecipeProducts_Patch.curWorker != null)
             {
-                var extension = GenRecipe_PostProcessProduct_Patch.curRecipe.GetModExtension<RecipeSkillBook>();
+                var extension = GenRecipe_MakeRecipeProducts_Patch.curRecipe.GetModExtension<RecipeSkillBook>();
                 float num = BookUtility.GetSkillExpForQuality(__instance.Quality);
                 __instance.values[extension.skill] = num;
                 return false;
