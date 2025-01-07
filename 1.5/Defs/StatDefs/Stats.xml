@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<StatDef>
+		<defName>VBE_WritingSpeed</defName>
+		<label>writing speed</label>
+		<description>A multiplier applied to the speed this person can write books at.</description>
+		<category>PawnWork</category>
+		<showDevelopmentalStageFilter>Child, Adult</showDevelopmentalStageFilter>
+		<defaultBaseValue>0.8</defaultBaseValue>
+		<minValue>0.1</minValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<skillNeedFactors>
+			<li Class="SkillNeed_BaseBonus">
+				<skill>Intellectual</skill>
+				<baseValue>1</baseValue>
+				<required>false</required>
+				<bonusPerLevel>0.02</bonusPerLevel>
+			</li>
+		</skillNeedFactors>
+		<statFactors>
+			<li>ResearchSpeedFactor</li>
+		</statFactors>
+		<capacityFactors>
+			<li>
+				<capacity>Consciousness</capacity>
+				<weight>1</weight>
+			</li>
+			<li>
+				<capacity>Sight</capacity>
+				<weight>1</weight>
+				<max>1</max>
+			</li>
+		</capacityFactors>
+		<parts>
+			<li Class="StatPart_Age" MayRequire="Ludeon.RimWorld.Biotech">
+				<useBiologicalYears>true</useBiologicalYears>
+				<humanlikeOnly>true</humanlikeOnly>
+				<curve>
+					<points>
+						<li>(3,0.05)</li>
+						<li>(13,1)</li>
+					</points>
+				</curve>
+			</li>
+		</parts>
+		<displayPriorityInCategory>4601</displayPriorityInCategory>
+	</StatDef>
+</Defs>

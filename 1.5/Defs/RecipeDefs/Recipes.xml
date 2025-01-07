@@ -2,7 +2,7 @@
 <Defs>
 
 	<RecipeDef Name="VBE_SkillBookRecipeBase" Abstract="True">
-		<workSpeedStat>ResearchSpeed</workSpeedStat>
+		<workSpeedStat>VBE_WritingSpeed</workSpeedStat>
 		<unfinishedThingDef>VBE_UnfinishedBook</unfinishedThingDef>
 		<effectWorking>Sculpt</effectWorking>
 		<soundWorking>Recipe_Write</soundWorking>
