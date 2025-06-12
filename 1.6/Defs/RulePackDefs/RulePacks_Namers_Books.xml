@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--======== Newspaper name ========-->
+
+  <RulePackDef>
+    <defName>ArtDescription_Newspaper</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+      <li>ArtNameUtility</li>
+	  <li>OutlanderPlaceNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+		<!-- Location -->
+		<li>desc->[Newspapers] of [nearnameinitial] [political_union_outlander]</li>	
+		<li>desc->[Newspapers] of [nearnameinitial] [political_adjective] [political_union_outlander]</li>	
+		<li>desc->[Newspapers] of [political_union_outlander] of [nearnameinitial]</li>	
+		<li>desc->[PeopleBadass]'s [Newspapers]</li>
+		<li>desc->[Newspapers] of [PlaceOutlander]</li>	
+		<li>desc->[Newspapers] of [Direction] [PlaceOutlander]</li>	
+        <!-- Numeric -->		
+		<li>desc->[Newspapers] [Digit]</li>
+        <li>desc->[Newspapers] [maybe_letter][Digit][maybe_letter]</li>
+        <li>desc->[Newspapers] [maybe_letter][Digit][Digit][maybe_letter]</li>
+        <li>desc->[Newspapers] [maybe_letter][Digit][Digit][Digit][maybe_letter]</li>
+        <li>desc->[Newspapers] [maybe_letter][RomanNumeral][maybe_letter]</li>
+		<!-- Person -->
+		<li>desc->[ANYPAWN_nameIndef]'s [Newspapers]</li>
+        <li>title->[desc]</li>
+
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>ArtDescription_NewspaperDesc</defName>
+    <rulePack>
+      <rulesStrings>
+		<li>desc->This newspaper goes indepth about the events of the last couple of days.</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+
+</Defs>

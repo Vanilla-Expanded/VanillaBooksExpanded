@@ -1,4 +1,0 @@
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaBooksExpanded\1.5\Assemblies\VanillaBooksExpanded.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaBooksExpanded\1.5\Source\VanillaBooksExpanded\obj\Debug\VanillaBooksExpanded.csproj.AssemblyReference.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaBooksExpanded\1.5\Source\VanillaBooksExpanded\obj\Debug\VanillaBooksExpanded.csproj.CoreCompileInputs.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaBooksExpanded\1.5\Source\VanillaBooksExpanded\obj\Debug\VanillaBooksExpanded.dll

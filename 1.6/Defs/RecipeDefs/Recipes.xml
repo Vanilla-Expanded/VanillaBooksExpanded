@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<RecipeDef Name="VBE_SkillBookRecipeBase" Abstract="True">
+		<workSpeedStat>VBE_WritingSpeed</workSpeedStat>
+		<unfinishedThingDef>VBE_UnfinishedBook</unfinishedThingDef>
+		<effectWorking>Sculpt</effectWorking>
+		<soundWorking>Recipe_Write</soundWorking>
+		<workerCounterClass>VanillaBooksExpanded.RecipeWorker_CreateSkillBook</workerCounterClass>
+		<recipeUsers>
+			<li>VBE_WritersTable</li>
+			<li>VBE_TypewritersTable</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Cloth</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Cloth</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<TextBook>1</TextBook>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="VBE_SkillBookRecipeBase">
+		<defName>VBE_RecipeShooting</defName>
+		<label>write shooting book</label>
+		<description>Write shooting book.</description>
+		<jobString>writing shooting book.</jobString>
+		<workSkill>Shooting</workSkill>
+		<modExtensions>
+			<li Class="VanillaBooksExpanded.RecipeSkillBook">
+				<skill>Shooting</skill>
+			</li>
+		</modExtensions>
+	</RecipeDef>
+
+	<RecipeDef ParentName="VBE_SkillBookRecipeBase">
+		<defName>VBE_RecipeMelee</defName>
+		<label>write melee book</label>
+		<description>Write melee book.</description>
+		<jobString>writing melee book.</jobString>
+		<workSkill>Melee</workSkill>
+		<modExtensions>
+			<li Class="VanillaBooksExpanded.RecipeSkillBook">
+				<skill>Melee</skill>
+			</li>
+		</modExtensions>
+	</RecipeDef>
+
+	<RecipeDef ParentName="VBE_SkillBookRecipeBase">
+		<defName>VBE_RecipeConstruction</defName>
+		<label>write construction book</label>
+		<description>Write construction book.</description>
+		<jobString>writing construction book.</jobString>
+		<workSkill>Construction</workSkill>
+		<modExtensions>
+			<li Class="VanillaBooksExpanded.RecipeSkillBook">
+				<skill>Construction</skill>
+			</li>
+		</modExtensions>
+	</RecipeDef>
+
+
+	<RecipeDef ParentName="VBE_SkillBookRecipeBase">
+		<defName>VBE_RecipeMining</defName>
+		<label>write mining book</label>
+		<description>Write mining book.</description>
+		<jobString>writing mining book.</jobString>
+		<workSkill>Mining</workSkill>
+		<modExtensions>
+			<li Class="VanillaBooksExpanded.RecipeSkillBook">
+				<skill>Mining</skill>
+			</li>
+		</modExtensions>
+	</RecipeDef>
+
+	<RecipeDef ParentName="VBE_SkillBookRecipeBase">
+		<defName>VBE_RecipeCooking</defName>
+		<label>write cooking book</label>
+		<description>Write cooking book.</description>
+		<jobString>writing cooking book.</jobString>
+		<workSkill>Cooking</workSkill>
+		<modExtensions>
+			<li Class="VanillaBooksExpanded.RecipeSkillBook">
+				<skill>Cooking</skill>
+			</li>
+		</modExtensions>
+	</RecipeDef>
+
+	<RecipeDef ParentName="VBE_SkillBookRecipeBase">
+		<defName>VBE_RecipeGrowing</defName>
+		<label>write growing book</label>
+		<description>Write growing book.</description>
+		<jobString>writing growing book.</jobString>
+		<workSkill>Plants</workSkill>
+		<modExtensions>
+			<li Class="VanillaBooksExpanded.RecipeSkillBook">
+				<skill>Plants</skill>
+			</li>
+		</modExtensions>
+	</RecipeDef>
+
+	<RecipeDef ParentName="VBE_SkillBookRecipeBase">
+		<defName>VBE_RecipeAnimals</defName>
+		<label>write animals book</label>
+		<description>Write animals book.</description>
+		<jobString>writing animals book.</jobString>
+		<workSkill>Animals</workSkill>
+		<modExtensions>
+			<li Class="VanillaBooksExpanded.RecipeSkillBook">
+				<skill>Animals</skill>
+			</li>
+		</modExtensions>
+	</RecipeDef>
+
+	<RecipeDef ParentName="VBE_SkillBookRecipeBase">
+		<defName>VBE_RecipeCrafting</defName>
+		<label>write crafting book</label>
+		<description>Write crafting book.</description>
+		<jobString>writing crafting book.</jobString>
+		<workSkill>Crafting</workSkill>
+		<modExtensions>
+			<li Class="VanillaBooksExpanded.RecipeSkillBook">
+				<skill>Crafting</skill>
+			</li>
+		</modExtensions>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="VBE_SkillBookRecipeBase">
+		<defName>VBE_RecipeArt</defName>
+		<label>write art book</label>
+		<description>Write art book.</description>
+		<jobString>writing art book.</jobString>
+		<workSkill>Artistic</workSkill>
+		<modExtensions>
+			<li Class="VanillaBooksExpanded.RecipeSkillBook">
+				<skill>Artistic</skill>
+			</li>
+		</modExtensions>
+	</RecipeDef>
+
+	<RecipeDef ParentName="VBE_SkillBookRecipeBase">
+		<defName>VBE_RecipeMedical</defName>
+		<label>write medical book</label>
+		<description>Write medical book.</description>
+		<jobString>writing medical book.</jobString>
+		<workSkill>Medicine</workSkill>
+		<modExtensions>
+			<li Class="VanillaBooksExpanded.RecipeSkillBook">
+				<skill>Medicine</skill>
+			</li>
+		</modExtensions>
+	</RecipeDef>
+
+
+	<RecipeDef ParentName="VBE_SkillBookRecipeBase">
+		<defName>VBE_RecipeSocial</defName>
+		<label>write social book</label>
+		<description>Write social book.</description>
+		<jobString>writing social book.</jobString>
+		<workSkill>Social</workSkill>
+		<modExtensions>
+			<li Class="VanillaBooksExpanded.RecipeSkillBook">
+				<skill>Social</skill>
+			</li>
+		</modExtensions>
+	</RecipeDef>
+
+	<RecipeDef ParentName="VBE_SkillBookRecipeBase">
+		<defName>VBE_RecipeIntellectual</defName>
+		<label>write intellectual book</label>
+		<description>Write intellectual book.</description>
+		<jobString>writing intellectual book.</jobString>
+		<workSkill>Intellectual</workSkill>
+		<modExtensions>
+			<li Class="VanillaBooksExpanded.RecipeSkillBook">
+				<skill>Intellectual</skill>
+			</li>
+		</modExtensions>
+	</RecipeDef>
+
+</Defs>
