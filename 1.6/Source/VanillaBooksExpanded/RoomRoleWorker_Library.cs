@@ -11,7 +11,13 @@ namespace VanillaBooksExpanded
 			int num = 0;
 			foreach (var t in room.ContainedAndAdjacentThings)
             {
-				if (t is Book && t.Position.GetFirstBuilding(t.Map) is Building_Storage)
+                if (t.def.building?.workTableRoomRole == RoomRoleDefOf.Laboratory)
+                {
+					return 0;
+                }
+
+
+                if (t is Book && t.Position.GetFirstBuilding(t.Map) is Building_Storage)
 				{
 					num++;
 				}
