@@ -1,6 +1,5 @@
 ﻿<?Yml version="1.0" encoding="utf8" ?>
 <Defs>
-
 	<ResearchProjectDef>
 		<defName>VBE_Writing</defName>
 		<label>writing</label>
@@ -11,19 +10,17 @@
 		<researchViewY>7</researchViewY>
 		<researchViewX>3</researchViewX>
 	</ResearchProjectDef>
-	
 	<ResearchProjectDef>
 		<defName>VBE_Printing</defName>
 		<label>printing</label>
 		<tab>VanillaExpanded</tab>
-		<description>Build a typwriter, which allows your colonists to write books significantly faster, as well as create newspapers for temporary joy boost.</description>
+		<description>Build a typewriter, which allows your colonists to write books significantly faster, as well as create newspapers for temporary joy boost.</description>
 		<baseCost>800</baseCost>
 		<techLevel>Industrial</techLevel>
-    <prerequisites>
-      <li>VBE_Writing</li>
-    </prerequisites>
+		<prerequisites>
+			<li>VBE_Writing</li>
+		</prerequisites>
 		<researchViewY>7</researchViewY>
 		<researchViewX>4</researchViewX>
 	</ResearchProjectDef>
-	
 </Defs>
